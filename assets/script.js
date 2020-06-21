@@ -12,8 +12,7 @@ var passChar = {
 
 // Write password to the #password input
 function writePassword() {
-  var password = window.prompt("Please select a character amount between 8 and 128");
-  var password = generatePassword(passwordNumber);
+  var password = generatePassword()
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -22,6 +21,17 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// function to generate password
+function generatePassword() {
+  // add prompts to get values from user
+  var charAmount = window.prompt("Please enter the number of characters for your password. The number needs to be between 8 and 128.");
+  var lower = window.confirm("Do you want lowercase letters in your password?");
+  var upper = window.confirm("Do you want uppercase letters in your password?");
+  var numerical = window.confirm("Do you want numbers in your password?");
+  var symbol = window.confirm("Do you want special characters in your password?");
+};
+
 
 
  

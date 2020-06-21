@@ -30,6 +30,27 @@ function generatePassword() {
   var upper = window.confirm("Do you want uppercase letters in your password?");
   var numerical = window.confirm("Do you want numbers in your password?");
   var symbol = window.confirm("Do you want special characters in your password?");
+  var passwordCheck = "";
+
+  //check user input with if statements
+
+     //check user input with if statements
+
+     if (lower === true)  {
+      passwordCheck += passChar.lower;
+    };
+  
+    if (upper === true) {
+        passwordCheck += passChar.upper;
+    };
+  
+    if (numerical === true) {
+        passwordCheck += passChar.numerical;
+    };
+  
+    if (symbol === true) {
+        passwordCheck += passChar.symbol;
+    };
 };
 
 
